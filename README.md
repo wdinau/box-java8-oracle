@@ -1,4 +1,4 @@
-box-java7-oracle
-================
+Wercker Oracle Java 8 box
+=========================
 
-A wercker box that comes with the Java7 Oracle distribution, maven, ant and sbt
+Wercker box with Oracle Java 8 and maven and gradle installed

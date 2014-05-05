@@ -31,7 +31,6 @@ script: |-
 
   # Install ant
   sudo apt-get install ant ant-contrib ivy ivy-doc -y -qq
-  sudo mv sbt /usr/share/sbt
 
    # We should have ant and ivy available
   type ant || { echo "I expected ant to be available. Aborting."; exit 1; }

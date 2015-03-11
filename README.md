@@ -1,15 +1,14 @@
 Wercker Oracle Java 8 box
 =========================
 
-Wercker box with Oracle Java 8 and maven and gradle installed
+A Total plagiarism thanks to mihkels/box-java8-oracle
+I didn't need gradle as I'm using gradle wrapper
 
-Basic working example 
+wercker.yml 
 ---------------------
 
-To build simple Spring Boot application You just have to create ```wercker.yml``` file with following content and place in the root of your Java project.
-
 ```yml
-box: mihkels/java8-oracle@0.0.1
+box: wdinau/java8@0.0.1
 build:
   steps:
     - script:
@@ -22,7 +21,7 @@ build:
       - script:
           name: Run gradle
           code: |
-            gradle --full-stacktrace -q --project-cache-dir=$WERCKER_CACHE_DIR assamble
+            ./gradlew clean build
 ```
 
 

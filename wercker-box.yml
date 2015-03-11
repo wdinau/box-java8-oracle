@@ -1,6 +1,6 @@
-name: java8-oracle
+name: java8
 version: 0.0.1
-description: Java8 box provisioned with the Oracle distribution via the webupd8team ppa. Comes with maven, ant and gradle 
+description: Java8 box provisioned with the Oracle distribution via the webupd8team ppa. Comes with maven. 
 keywords:
   - java
   - ant
@@ -24,15 +24,4 @@ script: |-
   # Install maven
   sudo apt-get install maven
 
-  # Install Gradle
-  sudo add-apt-repository ppa:cwchien/gradle -y
-  sudo apt-get update
-  sudo apt-get install gradle -y
-
-  # Install ant
-  sudo apt-get install ant ant-contrib ivy ivy-doc -y -qq
-
-   # We should have ant and ivy available
-  type ant || { echo "I expected ant to be available. Aborting."; exit 1; }
   type mvn || { echo "I expected maven to be available. Aborting."; exit 1; }
-  type gradle || { echo "No gradle command found...aborting"; exit 1; }
